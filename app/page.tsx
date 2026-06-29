@@ -4,13 +4,14 @@ import { useSyncExternalStore, useState } from "react";
 import HalftoneCorners from "./components/HalftoneCorners";
 import Nav from "./components/Nav";
 import PanelSobre from "./components/PanelSobre";
+import PanelServicos from "./components/PanelServicos";
 import PanelCurriculo from "./components/PanelCurriculo";
 import PanelBeats from "./components/PanelBeats";
 import Footer from "./components/Footer";
 
-type Panel = "sobre" | "curriculo" | "beats";
+type Panel = "sobre" | "curriculo" | "beats" | "servicos";
 
-const PANELS: Panel[] = ["sobre", "curriculo", "beats"];
+const PANELS: Panel[] = ["sobre", "curriculo", "beats", "servicos"];
 
 function hashToPanel(hash: string): Panel {
   const slug = hash.replace("#", "") as Panel;
@@ -44,6 +45,7 @@ export default function Home() {
       <HalftoneCorners />
       <Nav activePanel={activePanel} onPanelChange={handlePanelChange} />
       <PanelSobre isActive={activePanel === "sobre"} onPanelChange={handlePanelChange} />
+      <PanelServicos isActive={activePanel === "servicos"} onPanelChange={handlePanelChange} />
       <PanelCurriculo isActive={activePanel === "curriculo"} />
       <PanelBeats isActive={activePanel === "beats"} hasBeenActive={beatsLoaded || activePanel === "beats"} />
       <Footer />

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 interface PanelSobreProps {
   isActive: boolean;
-  onPanelChange: (panel: "sobre" | "curriculo" | "beats") => void;
+  onPanelChange: (panel: "sobre" | "curriculo" | "beats" | "servicos") => void;
 }
 
 export default function PanelSobre({ isActive, onPanelChange }: PanelSobreProps) {

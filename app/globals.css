@@ -541,8 +541,8 @@ nav {
 
 /* ─── BEATS ──────────────────────────────────────────────────── */
 .beats-intro {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: clamp(0.75rem, 1.8vw, 0.95rem);
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.82rem, 1.8vw, 0.95rem);
   color: var(--gray);
   line-height: 1.75;
   letter-spacing: 0.01em;
@@ -751,7 +751,12 @@ footer {
   .stack-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
   nav { gap: 5px; }
   .nav-btn { padding: 6px 11px; font-size: 0.58rem; }
-  footer { flex-direction: column; align-items: flex-start; }
+  footer { flex-direction: column; align-items: center; text-align: center; }
+  .footer-links { justify-content: center; }
+}
+
+@media (max-width: 720px) {
+  .beat-list { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 420px) {
@@ -761,4 +766,247 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .panel { animation: none; }
   .polaroid { transition: none; }
+}
+
+/* ─── SERVIÇOS ───────────────────────────────────────────────── */
+
+/* Hero */
+.svc-hero-inner {
+  padding-bottom: 60px;
+}
+.svc-hero-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 500;
+  font-size: clamp(2.8rem, 7vw, 6rem);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: .92;
+  color: var(--black);
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+.svc-hero-accent {
+  border-bottom: 4px solid var(--black);
+  padding-bottom: 2px;
+}
+.svc-hero-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.82rem, 1.6vw, 0.95rem);
+  color: var(--gray);
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+  margin-top: -24px;
+  margin-bottom: 48px;
+}
+
+/* Service cards */
+.svc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.svc-card {
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--sh);
+  padding: 24px;
+  transition: transform var(--t), box-shadow var(--t);
+  cursor: default;
+}
+.svc-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--sh-lg);
+}
+.svc-card--wide {
+  grid-column: 1 / -1;
+}
+.svc-card--wide .svc-card-items {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+.svc-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.svc-card-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.svc-card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 1.45rem;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 10px;
+}
+.svc-card-desc {
+  font-size: 0.82rem;
+  color: #444;
+  line-height: 1.72;
+  margin-bottom: 18px;
+}
+.svc-card-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.svc-card-item {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--black);
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.svc-card-item::before {
+  content: '─';
+  color: var(--gray-lt);
+  flex-shrink: 0;
+}
+
+/* Process / Timeline */
+.svc-timeline {
+  display: flex;
+  flex-direction: column;
+}
+.svc-step {
+  display: flex;
+  gap: 22px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--gray-lt);
+  align-items: flex-start;
+}
+.svc-step:first-child { padding-top: 0; }
+.svc-step:last-child { border-bottom: none; }
+.svc-step-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  background: var(--black);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 6px 11px;
+  flex-shrink: 0;
+  box-shadow: var(--sh);
+  line-height: 1;
+  align-self: flex-start;
+  margin-top: 3px;
+}
+.svc-step-content { flex: 1; }
+.svc-step-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  margin-bottom: 6px;
+}
+.svc-step-desc {
+  font-size: 0.82rem;
+  color: #444;
+  line-height: 1.72;
+}
+
+/* Diferenciais */
+.svc-diff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--sh);
+}
+.svc-diff-item {
+  padding: 16px 18px;
+  border-right: var(--border);
+  border-bottom: var(--border);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background var(--t), color var(--t);
+  cursor: default;
+  line-height: 1.4;
+}
+.svc-diff-item:hover {
+  background: var(--black);
+  color: var(--white);
+}
+.svc-diff-dash {
+  color: var(--gray-lt);
+  flex-shrink: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  transition: color var(--t);
+}
+.svc-diff-item:hover .svc-diff-dash { color: var(--gray); }
+
+/* Final CTA */
+.svc-cta {
+  background: var(--black);
+  border-top: var(--border);
+  padding: 80px 24px;
+}
+.svc-cta-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.svc-cta-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: .92;
+  color: var(--white);
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 3px solid rgba(255,255,255,0.15);
+}
+.svc-cta-text {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(0.7rem, 1.5vw, 0.88rem);
+  color: var(--gray-lt);
+  line-height: 1.85;
+  max-width: 580px;
+  margin-bottom: 36px;
+  letter-spacing: 0.01em;
+}
+.svc-cta-btn {
+  background: var(--white) !important;
+  color: var(--black) !important;
+  border-color: var(--white) !important;
+  box-shadow: 4px 4px 0 rgba(255,255,255,0.25) !important;
+}
+.svc-cta-btn:hover {
+  background: var(--bg) !important;
+  box-shadow: 6px 6px 0 rgba(255,255,255,0.25) !important;
+}
+.svc-cta-btn:active {
+  box-shadow: none !important;
+}
+
+/* ─── RESPONSIVE (SERVIÇOS) ──────────────────────────────────── */
+@media (max-width: 720px) {
+  .svc-hero-title { font-size: clamp(2.2rem, 10vw, 4rem); }
+  .svc-grid { grid-template-columns: 1fr; }
+  .svc-card--wide { grid-column: auto; }
+  .svc-card--wide .svc-card-items { flex-direction: column; }
+  .svc-diff-grid { grid-template-columns: 1fr 1fr; }
+  .svc-cta { padding: 60px 24px; }
+}
+@media (max-width: 420px) {
+  .svc-diff-grid { grid-template-columns: 1fr; }
 }

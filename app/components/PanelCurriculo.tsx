@@ -36,7 +36,7 @@ export default function PanelCurriculo({ isActive }: PanelCurriculoProps) {
   return (
     <div id="panel-curriculo" className={`panel${isActive ? " active" : ""}`}>
       <div className="section-inner">
-        <p className="section-eyebrow">01 — Trajetória</p>
+        <p className="section-eyebrow">2 — Trajetória</p>
         <h2 className="section-title">Currículo</h2>
 
         {/* Resumo */}

@@ -10,17 +10,17 @@ const featuredBeat = {
 };
 
 const beats = [
-  { name: "QCCV", bpm: "98 BPM", key: "Bmaj", genre: "R&B",  embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2053974740&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" },
-  { name: "High Vibe", bpm: "110 BPM", key: "Cmin", genre: "R&B", embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2347783712&color=%23949c8c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" },
-  { name: "React", bpm: "125 BPM", key: "Cmin", genre: "R&B", embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2050445972&color=%23949c8c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" },
-  { name: "22", bpm: "98 BPM", key: "Gmaj",   genre: "R&B", embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2050440752&color=%23949c8c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" },
+  { name: "QCCV",      bpm: "98 BPM",  key: "Bmaj", genre: "R&B", url: "https://soundcloud.com/franclin-junior/qccv",      embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2053974740&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" },
+  { name: "High Vibe", bpm: "110 BPM", key: "Cmin", genre: "R&B", url: "https://soundcloud.com/franclin-junior/high-vibe",  embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2347783712&color=%23949c8c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" },
+  { name: "React",     bpm: "125 BPM", key: "Cmin", genre: "R&B", url: "https://soundcloud.com/franclin-junior/react",     embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2050445972&color=%23949c8c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" },
+  { name: "22",        bpm: "98 BPM",  key: "Gmaj", genre: "R&B", url: "https://soundcloud.com/franclin-junior/22",        embed: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2050440752&color=%23949c8c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" },
 ];
 
 export default function PanelBeats({ isActive, hasBeenActive }: PanelBeatsProps) {
   return (
     <div id="panel-beats" className={`panel${isActive ? " active" : ""}`}>
       <div className="section-inner">
-        <p className="section-eyebrow">02 — Produção Musical</p>
+        <p className="section-eyebrow">3 — Produção Musical</p>
         <h2 className="section-title">Beats</h2>
 
         <p className="beats-intro">
@@ -65,7 +65,7 @@ export default function PanelBeats({ isActive, hasBeenActive }: PanelBeatsProps)
                 {hasBeenActive && beat.embed ? (
                   <iframe
                     width="100%"
-                    height="120"
+                    height="166"
                     allow="autoplay"
                     src={beat.embed}
                     style={{ border: "none", display: "block" }}

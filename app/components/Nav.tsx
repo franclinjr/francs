@@ -1,6 +1,6 @@
 "use client";
 
-type Panel = "sobre" | "curriculo" | "beats";
+type Panel = "sobre" | "curriculo" | "beats" | "servicos";
 
 interface NavProps {
   activePanel: Panel;
@@ -15,6 +15,12 @@ export default function Nav({ activePanel, onPanelChange }: NavProps) {
         onClick={() => onPanelChange("sobre")}
       >
         Sobre
+      </button>
+      <button
+        className={`nav-btn${activePanel === "servicos" ? " active" : ""}`}
+        onClick={() => onPanelChange("servicos")}
+      >
+        Serviços
       </button>
       <button
         className={`nav-btn${activePanel === "curriculo" ? " active" : ""}`}
