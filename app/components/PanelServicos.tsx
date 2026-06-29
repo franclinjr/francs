@@ -23,9 +23,9 @@ const services = [
     wide: false,
   },
   {
-    badge: "Automação",
-    title: "IA e Automações",
-    desc: "Criação de soluções inteligentes para reduzir tarefas repetitivas e melhorar o atendimento ao cliente.",
+    badge: "Inteligência Artificial",
+    title: "Agentes de IA",
+    desc: "Agentes inteligentes de atendimento que respondem clientes, qualificam leads e escalam o suporte sem aumentar a equipe.",
     wide: false,
   },
   {
