@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Franclin Junior | Full Stack Developer",
-  description: "Full Stack Developer · IA · HubSpot · São Paulo",
+  description: "Full Stack Developer · IA · HubSpot · Embu das Artes - SP",
 };
 
 export default function RootLayout({
