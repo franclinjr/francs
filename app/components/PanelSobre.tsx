@@ -41,7 +41,7 @@ export default function PanelSobre({ isActive, onPanelChange }: PanelSobreProps)
         </div>
 
         <div className="beat-tags hero-beat-tags">
-          <span className="beat-tag">4+ anos de experiência</span>
+          <span className="beat-tag">5+ anos de experiência</span>
           <span className="beat-tag">Desenvolvimento Frontend</span>
           <span className="beat-tag">Agentes de IA</span>
           <span className="beat-tag">HubSpot</span>
