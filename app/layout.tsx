@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Franclin Junior | Full Stack Developer",
-  description: "Full Stack Developer · IA · HubSpot · Embu das Artes - SP",
+  title: "Franclin Junior | Software Engineer",
+  description: "Software Engineer · Frontend developer · HubSpot",
 };
 
 export default function RootLayout({
