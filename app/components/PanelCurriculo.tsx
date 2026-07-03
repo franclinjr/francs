@@ -25,7 +25,7 @@ export default function PanelCurriculo({ isActive }: PanelCurriculoProps) {
             <h2>Currículo</h2>
             <a
               className="btn btn-solid cv-download-btn"
-              href="/FranclinJrCV.pdf"
+              href="/franclinjrCv.pdf"
               download="Franclin Jr - Software Engineer.pdf"
             >
               Baixar PDF
