@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Franclin Junior | Software Engineer",
@@ -22,6 +23,9 @@ export default function RootLayout({
         />
       </head>
       <body>{children}</body>
+      <GoogleAnalytics
+        gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!}
+      />
     </html>
   );
 }
