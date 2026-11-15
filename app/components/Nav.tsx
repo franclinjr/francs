@@ -28,12 +28,14 @@ export default function Nav({ activePanel, onPanelChange }: NavProps) {
       >
         Currículo
       </button>
-      <button
-        className={`nav-btn${activePanel === "beats" ? " active" : ""}`}
-        onClick={() => onPanelChange("beats")}
+      <a
+        className="nav-btn"
+        href="https://beats.francs.com.br"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Beats
-      </button>
+      </a>
     </nav>
   );
 }

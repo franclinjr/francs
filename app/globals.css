@@ -68,6 +68,8 @@ nav {
   border-radius: var(--radius);
   padding: 7px 16px;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
   box-shadow: 3px 3px 0 var(--black);
   transition: transform var(--t), box-shadow var(--t), background var(--t), color var(--t);
 }
